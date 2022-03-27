@@ -62,7 +62,7 @@ game.Players.LocalPlayer.Character.Head.BodyAura:Destroy()
 --BigJump
 	local mouse = game.Players.LocalPlayer:GetMouse()
 			mouse.KeyDown:Connect(function(k) 
-				if k == "1" then 
+				if k == "t" then 
 
 local Anim = Instance.new("Animation")
 Anim.AnimationId = "rbxassetid://4521638309"
@@ -174,10 +174,10 @@ tri.Size = Vector3.new(0.22,0.22,0.22)
 tri.CFrame = char['Right Arm'].CFrame
 triweld = Instance.new('Weld',tri)
 triweld.Part0 = tri
-triweld.Part1 = char['Left Arm']
-An = {90,75,0}
+triweld.Part1 = char['Right Arm']
+An = {95,95,0}
 Angle = CFrame.fromEulerAnglesXYZ(math.rad(An[1]), math.rad(An[2]),math.rad(An[3]))
-triweld.C0 = CFrame.new(0,-2.3,0.85)*Angle
+triweld.C0 = CFrame.new(0,0.3,0.85)*Angle
 --lmb
 game.Players.LocalPlayer.Backpack.Main.AsrielMoves.ModuleScript.Animations.BasicCombat.Light1.AnimationId = "rbxassetid://5411089475"
 game.Players.LocalPlayer.Backpack.Main.AsrielMoves.ModuleScript.Animations.BasicCombat.Light2.AnimationId = "rbxassetid://4800163313"
@@ -187,7 +187,7 @@ game.Players.LocalPlayer.Backpack.Main.AsrielMoves.ModuleScript.Animations.Basic
 --Z
 	local mouse = game.Players.LocalPlayer:GetMouse()
 			mouse.KeyDown:Connect(function(k) 
-				if k == "2" then 
+				if k == "1" then 
 local Anim = Instance.new("Animation")
 Anim.AnimationId = "rbxassetid://4905914802"
 local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
@@ -209,7 +209,7 @@ end)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
 			mouse.KeyDown:Connect(function(k) 
-				if k == "3" then 
+				if k == "2" then 
 local Anim = Instance.new("Animation")
 Anim.AnimationId = "rbxassetid://5411089475"
 local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
@@ -278,7 +278,7 @@ end)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
 			mouse.KeyDown:Connect(function(k) 
-				if k == "4" then 
+				if k == "3" then 
 
 for i = 1,37 do
 wait(0.1)
@@ -336,6 +336,7 @@ game.ReplicatedStorage.Effects.SpeedLines.Base.Color = Color3.fromRGB(0, 255, 25
 game.ReplicatedStorage.Effects.SpeedLines.SpeedLine.Color = Color3.fromRGB(0, 255, 255)
 for i,v in pairs(getconnections(game:GetService("ReplicatedStorage").Remotes.Effects.OnClientEvent)) do
 v:Fire({"Model","SpeedLines",game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,3,0)*CFrame.Angles(-90, 0, math.rad(43))})
+wait(0.1)
 end
 end
 end
@@ -545,7 +546,7 @@ end)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
 			mouse.KeyDown:Connect(function(k) 
-				if k == "5" then 
+				if k == "4" then 
 local Anim = Instance.new("Animation")
 Anim.AnimationId = "rbxassetid://5080902449"
 local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
@@ -602,82 +603,4 @@ local A_1 = getrenv()._G.Pass
 end
 end)
 
-	local mouse = game.Players.LocalPlayer:GetMouse()
-			mouse.KeyDown:Connect(function(k) 
-				if k == "6" then
-        local animation = Instance.new("Animation")
-        animation.AnimationId = "rbxassetid://5411089475"
-        local anim = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(animation)
-        anim:Play()
-        wait(0.3)
-        anim:AdjustSpeed(0.0)
-    local A_1 =  {
-              [1] = getrenv()._G.Pass, 
-              [2] = "Chatted", 
-              [3] = [[You must suffer.]],
-              [4] = Color3.fromRGB(255, 0, 0)
-        }
-        local Event = game:GetService("ReplicatedStorage").Remotes.Events
-        Event:FireServer(A_1)
-        for _,v in pairs(game:GetService("ReplicatedStorage").RogueEffects:GetChildren()) do
-            if v.Name == 'Ignis' then
-            local char = game.Players.LocalPlayer.Character
-            sword2 = v:Clone()
-            sword2.Parent = char
-            sword2.Anchored = false
-            weld = Instance.new('Weld',sword2)
-            weld.Part0 = sword2
-            weld.Part1 = char['HumanoidRootPart']
-            sword2.Name = 'FlameThing1'
-            weld.C0 = CFrame.new(0,2,4)*CFrame.Angles(0,2,0)
-            sword2.Transparency = 1
-            end
-            end
-        for _,v in pairs(game:GetService("ReplicatedStorage").RogueEffects:GetChildren()) do
-            if v.Name == 'FireEffect' then
-            local char = game.Players.LocalPlayer.Character
-            sword2 = v:Clone()
-            sword2.Parent = char
-            sword2.Anchored = false
-            weld = Instance.new('Weld',sword2)
-            weld.Part0 = sword2
-            weld.Part1 = char['HumanoidRootPart']
-            sword2.Name = 'FlameThing2'
-            weld.C0 = CFrame.new(4,0,0)*CFrame.Angles(0,2,0)
-            sword2.Transparency = 1
-            end
-            end
-        for _,v in pairs(game:GetService("ReplicatedStorage").RogueEffects:GetChildren()) do
-            if v.Name == 'Ignis' then
-            local char = game.Players.LocalPlayer.Character
-            sword2 = v:Clone()
-            sword2.Parent = char
-            sword2.Anchored = false
-            weld = Instance.new('Weld',sword2)
-            weld.Part0 = sword2
-            weld.Part1 = char['HumanoidRootPart']
-            sword2.Name = 'FlameThing3'
-            weld.C0 = CFrame.new(0,0,4)*CFrame.Angles(-1,0,1)
-            sword2.Transparency = 1
-            end
-            end
-for i = 1,20 do
-		local A_1 = getrenv()._G.Pass
-		local A_2 = game:GetService("Players").LocalPlayer.Backpack.Main.LockOnScript.LockOn.Value
-		local A_3 = 
-			{
-				["HitTime"] = 0.1, 
-				["Type"] = "Normal", 
-				["HitEffect"] = "YellowHitEffect",
-				["HurtAnimation"] = game:GetService("ReplicatedStorage").Animations.HurtAnimations.Hurt2,
-				["Sound"] = game:GetService("ReplicatedStorage").Sounds.Lava,
-				["Velocity"] = Vector3.new(0, 1, 0), 
-				["CombatInv"] = true,
-				["Damage"] = 1
-			}
-		local Event = game:GetService("ReplicatedStorage").Remotes.Damage
-		Event:InvokeServer(A_1, A_2, A_3)
-end
-end
-end)
 
